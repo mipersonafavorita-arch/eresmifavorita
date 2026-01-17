@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Juegos de Amor 💖</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#ffe0ec,#e3f2fd);
+  font-family:Georgia,serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.caja{
+  background:white;
+  padding:35px;
+  border-radius:30px;
+  max-width:560px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+h2{color:#c2185b}
+
+.menu button{
+  margin:10px;
+  padding:12px 24px;
+  border:none;
+  border-radius:25px;
+  background:#f48fb1;
+  color:white;
+  cursor:pointer;
+}
+.menu button:hover{background:#ec407a}
+
+.juego{display:none;margin-top:25px}
+
+.opcion{
+  display:block;
+  margin:12px auto 6px;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#f8bbd0;
+  cursor:pointer;
+}
+.opcion:hover{background:#f06292;color:white}
+
+.resultado{
+  font-size:16px;
+  margin-bottom:10px;
+  display:none;
+  color:#ad1457;
+}
+
+.cabecera{
+  font-size:17px;
+  margin-bottom:15px;
+  color:#880e4f;
+}
+
+button.volver{
+  margin-top:25px;
+  padding:10px 22px;
+  border:none;
+  border-radius:20px;
+  background:#ff5c8a;
+  color:white;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="caja">
+<h2>🎮 Juegos de Amor</h2>
+<p>Elige un juego 💖</p>
+
+<!-- MENÚ -->
+<div class="menu" id="menu">
+  <button onclick="mostrarJuego(1)">💖 Elige el amor</button>
+  <button onclick="mostrarJuego(2)">💭 ¿Crees que te amo?</button>
+  <button onclick="mostrarJuego(3)">🌸 Mensaje sorpresa</button>
+</div>
+
+<!-- JUEGO 1 -->
+<div class="juego" id="juego1">
+  <h3>💖 Elige el amor correcto</h3>
+  <button class="opcion" onclick="incorrecto()">❌ Cualquiera</button>
+  <button class="opcion" onclick="incorrecto()">❌ No eres tú</button>
+  <button class="opcion" onclick="correcto()">✅ Eres tú</button>
+  <div class="resultado" id="res1"></div>
+  <button class="volver" onclick="volver()">⬅ Volver</button>
+</div>
+
+<!-- JUEGO 2 -->
+<div class="juego" id="juego2">
+
+  <!-- 💖 TU FRASE COMO CABECERA -->
+  <div class="cabecera">
+    😍 Si el amor se mide en granitos de arena, el mío por ti es infinito 💖  
+    <br>Te amo infinito ♾️💕
+  </div>
+
+  <h3>💭 ¿Crees que te amo?</h3>
+
+  <button class="opcion" onclick="mostrarSi()">💕 Sí</button>
+  <div class="resultado" id="si">
+    💕 Te amo con un amor sincero, tranquilo y real 💕
+  </div>
+
+  <button class="opcion" onclick="mostrarMucho()">💖 Mucho</button>
+  <div class="resultado" id="mucho">
+    💖 Te amo más de lo que imaginas y más de lo que digo 💖
+  </div>
+
+  <button class="opcion" onclick="mostrarDemasiado()">🥰 Demasiado</button>
+  <div class="resultado" id="demasiado">
+    🥰 Te amo sin medida, sin límites y sin final 🥰
+  </div>
+
+  <button class="volver" onclick="volver()">⬅ Volver</button>
+</div>
+
+<!-- JUEGO 3 -->
+<div class="juego" id="juego3">
+  <h3>🌸 Mensaje sorpresa</h3>
+  <button class="opcion" onclick="sorpresa()">✨ Tocar</button>
+  <div class="resultado" id="res3"></div>
+  <button class="volver" onclick="volver()">⬅ Volver</button>
+</div>
+
+</div>
+
+<script>
+const juegos=document.getElementsByClassName("juego");
+const menu=document.getElementById("menu");
+
+function mostrarJuego(n){
+  menu.style.display="none";
+  for(let i=0;i<juegos.length;i++) juegos[i].style.display="none";
+  document.getElementById("juego"+n).style.display="block";
+}
+
+function volver(){
+  for(let i=0;i<juegos.length;i++) juegos[i].style.display="none";
+  menu.style.display="block";
+}
+
+/* JUEGO 1 */
+function incorrecto(){
+  const r=document.getElementById("res1");
+  r.style.display="block";
+  r.innerText="😅 Intenta otra vez";
+}
+function correcto(){
+  const r=document.getElementById("res1");
+  r.style.display="block";
+  r.innerText="💖 Siempre serás tú 💖";
+}
+
+/* JUEGO 2 */
+function mostrarSi(){
+  document.getElementById("si").style.display="block";
+}
+function mostrarMucho(){
+  document.getElementById("mucho").style.display="block";
+}
+function mostrarDemasiado(){
+  document.getElementById("demasiado").style.display="block";
+}
+
+/* JUEGO 3 */
+const mensajes=[
+ "💖 Eres lo mejor que me pasó",
+ "🌸 Me haces muy feliz",
+ "💫 Siempre pienso en ti",
+ "🏡 Eres mi lugar seguro",
+ "🥰 Te amo más cada día"
+];
+function sorpresa(){
+  const r=document.getElementById("res3");
+  r.style.display="block";
+  r.innerText=mensajes[Math.floor(Math.random()*mensajes.length)];
+}
+</script>
+
+</body>
+</html>

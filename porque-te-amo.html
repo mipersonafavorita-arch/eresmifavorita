@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>¿Por qué te amo? 💖</title>
+<style>
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#fff1f6,#fce4ec);
+font-family:Georgia,serif;display:flex;align-items:center;justify-content:center}
+.caja{background:white;padding:35px;border-radius:30px;max-width:560px;width:90%;
+text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.mensaje{display:none;font-size:18px;margin-top:25px}
+button{margin-top:30px;padding:14px 36px;border:none;background:#f06292;
+color:white;border-radius:35px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="caja">
+<h2>💖 ¿Por qué te amo?</h2>
+
+<div class="mensaje">💗 Te amo porque me importan tus silencios, no solo tus palabras.</div>
+<div class="mensaje">🫶 Te amo porque pienso en ti incluso cuando no te escribo.</div>
+<div class="mensaje">🌱 Te amo porque quiero verte crecer, aunque a veces no sea conmigo.</div>
+<div class="mensaje">🤍 Te amo porque me nace cuidarte sin que me lo pidas.</div>
+<div class="mensaje">✨ Te amo porque cuando algo me pasa, eres mi primer pensamiento.</div>
+<div class="mensaje">🕊️ Te amo porque contigo no siento que tenga que demostrar nada.</div>
+<div class="mensaje">🌧️ Te amo porque incluso en tus días grises, sigues siendo mi lugar seguro.</div>
+<div class="mensaje">🫂 Te amo porque me quedo, incluso cuando sería más fácil irme.</div>
+<div class="mensaje">💫 Te amo porque me importan tus miedos, no solo tus sueños.</div>
+<div class="mensaje">🌿 Te amo porque tu bienestar me importa tanto como el mío.</div>
+
+<div class="mensaje">🤍 Te amo porque te escucho con el corazón, no solo con los oídos.</div>
+<div class="mensaje">🕯️ Te amo porque quiero cuidarte incluso cuando no sabes cuidarte tú.</div>
+<div class="mensaje">🌙 Te amo porque pienso en ti antes de dormir y al despertar.</div>
+<div class="mensaje">✨ Te amo porque no te idealizo, te elijo.</div>
+<div class="mensaje">🫶 Te amo porque me importa cómo te sientes, no solo cómo te ves.</div>
+<div class="mensaje">🌊 Te amo porque cuando te duele algo, a mí también me duele.</div>
+<div class="mensaje">🤍 Te amo porque quiero construir contigo, no solo sentir.</div>
+<div class="mensaje">🌱 Te amo porque quiero ser paz en tu vida, no ruido.</div>
+<div class="mensaje">💭 Te amo porque recuerdo detalles que para otros pasarían desapercibidos.</div>
+<div class="mensaje">🫂 Te amo porque cuando estás triste, no intento arreglarte, solo acompañarte.</div>
+
+<div class="mensaje">🕊️ Te amo porque quiero que seas libre, no dependiente.</div>
+<div class="mensaje">🌙 Te amo porque te pienso incluso cuando estoy cansado.</div>
+<div class="mensaje">🤍 Te amo porque quiero que te sientas segura, no controlada.</div>
+<div class="mensaje">✨ Te amo porque me importas en lo pequeño y en lo grande.</div>
+<div class="mensaje">🌿 Te amo porque elijo tu bienestar, incluso cuando no me beneficia.</div>
+<div class="mensaje">🫶 Te amo porque me nace proteger tu corazón.</div>
+<div class="mensaje">🌧️ Te amo porque tus lágrimas me importan.</div>
+<div class="mensaje">🤍 Te amo porque quiero ser hogar, no solo compañía.</div>
+<div class="mensaje">💫 Te amo porque tu felicidad también es responsabilidad mía.</div>
+<div class="mensaje">🕯️ Te amo porque no quiero perderte, pero nunca te retendría.</div>
+
+
+<button onclick="mostrar()">💌 Saber</button>
+</div>
+
+<script>
+const mensajes=document.getElementsByClassName("mensaje");
+let actual=0;
+function mostrar(){
+ for(let i=0;i<mensajes.length;i++) mensajes[i].style.display="none";
+ if(actual>=mensajes.length) actual=0;
+ mensajes[actual].style.display="block";
+ actual++;
+}
+</script>
+
+</body>
+</html>

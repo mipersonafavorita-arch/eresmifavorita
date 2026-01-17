@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Frasco de Amor 💌</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#ffe0ec,#e3f2fd);
+  font-family:Georgia,serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.caja{
+  background:white;
+  padding:35px;
+  border-radius:30px;
+  max-width:560px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+h2{color:#c2185b}
+.mensaje{
+  display:none;
+  font-size:18px;
+  line-height:1.6;
+  margin-top:25px;
+  animation:fade .8s ease;
+}
+@keyframes fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+button{
+  margin-top:30px;
+  padding:14px 36px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  color:white;
+  background:#ff5c8a;
+  border-radius:35px;
+  animation:latido 1.3s infinite alternate;
+}
+@keyframes latido{
+  from{transform:scale(1)}
+  to{transform:scale(1.08)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="caja">
+<h2>💌 Frasco de Amor</h2>
+<p>Toca el botón y lee con el corazón 💖</p>
+
+<div class="mensaje">💖 Amarte es mi forma favorita de existir.</div>
+<div class="mensaje">🌷 Tu nombre vive cómodo en mi corazón.</div>
+<div class="mensaje">✨ Pensarte me calma el alma.</div>
+<div class="mensaje">💞 Contigo, todo se siente más bonito.</div>
+<div class="mensaje">🌸 No sabía que podía amar así… hasta que llegaste.</div>
+<div class="mensaje">💗 Mi corazón te eligió sin pedir permiso.</div>
+<div class="mensaje">🌼 Amarte es lo más sincero que hago cada día.</div>
+<div class="mensaje">💖 Eres el detalle que le faltaba a mi vida.</div>
+<div class="mensaje">🌙 Incluso en silencio, te siento conmigo.</div>
+<div class="mensaje">✨ Mi lugar seguro siempre será contigo.</div>
+<div class="mensaje">💞 No eres casualidad, eres destino bonito.</div>
+<div class="mensaje">🌷 Me gusta quién soy cuando estoy contigo.</div>
+<div class="mensaje">💖 Amar contigo se siente de lo mas tierno.</div>
+<div class="mensaje">🌸 Tu sonrisa tiene el poder de cambiar mi día.</div>
+<div class="mensaje">💗 Cada latido mío sabe tu nombre.</div>
+<div class="mensaje">🌼 Eres mi pensamiento favorito en cada segundo.</div>
+<div class="mensaje">✨ Me haces creer en el amor verdadero.</div>
+<div class="mensaje">💞 Si el amor tuviera forma, tendría la tuya.</div>
+<div class="mensaje">🌙 Mi corazón te habla incluso cuando callo.</div>
+<div class="mensaje">💖 Contigo aprendí que amar no duele, sana y es hermoso.</div>
+<div class="mensaje">🌷 Te voy hacer fiel siempre y respetar el lugar que tienes en mi corazón.</div>
+<div class="mensaje">✨ Me enamoras en cada segundo que pasa.</div>
+<div class="mensaje">💗 No hay nadie como tú, y eso me encanta.</div>
+<div class="mensaje">🌸 Elegirte es lo más importante que hago.</div>
+<div class="mensaje">💞 Tu amor se siente demasiado hermoso.</div>
+<div class="mensaje">🌼 Amar contigo es mi mejor deseo.</div>
+<div class="mensaje">✨ Mi corazón sonríe cuando piensa en ti.</div>
+<div class="mensaje">💖 Gracias por existir en mi vida.</div>
+<div class="mensaje">🌙 Mi amor por ti no tiene prisa ni final.</div>
+<div class="mensaje">💗 Siempre serás mi persona favorita.</div>
+<div class="mensaje">💌 Siempre serás tú.</div>
+
+<button onclick="mostrar()">💌 Abrir frasco</button>
+</div>
+
+<script>
+const mensajes = document.getElementsByClassName("mensaje");
+let actual = 0;
+
+function mostrar(){
+  // ocultar todos
+  for(let i=0;i<mensajes.length;i++){
+    mensajes[i].style.display="none";
+  }
+
+  // reiniciar cuando llega al final
+  if(actual >= mensajes.length){
+    actual = 0;
+  }
+
+  mensajes[actual].style.display = "block";
+  actual++;
+}
+</script>
+
+</body>
+</html>

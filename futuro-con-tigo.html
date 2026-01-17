@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Futuro contigo 🔮</title>
+<style>
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#fdeff9,#ec38bc);
+font-family:Georgia,serif;display:flex;align-items:center;justify-content:center;color:white}
+.caja{background:rgba(255,255,255,.15);padding:35px;border-radius:30px;
+max-width:560px;width:90%;text-align:center}
+.mensaje{display:none;font-size:18px;margin-top:25px}
+button{margin-top:30px;padding:14px 36px;border:none;background:#ff80ab;
+color:white;border-radius:35px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="caja">
+<h2>🔮 Sueños contigo</h2>
+
+<div class="mensaje">🌅 Sueño con despertar contigo y sonreír antes de abrir los ojos.</div>
+<div class="mensaje">💫 Sueño con un futuro donde tu risa sea mi sonido favorito.</div>
+<div class="mensaje">🏡 Sueño con un lugar donde tú y yo seamos hogar.</div>
+<div class="mensaje">🌸 Sueño con días simples, pero contigo.</div>
+<div class="mensaje">💖 Sueño con tomarte la mano y no soltarla nunca.</div>
+<div class="mensaje">🌈 Sueño con un mañana donde siempre nos elijamos.</div>
+<div class="mensaje">✨ Sueño con construir algo bonito a tu lado.</div>
+<div class="mensaje">🌙 Sueño con noches tranquilas y corazones en paz.</div>
+<div class="mensaje">🫶 Sueño con cuidarte en cada etapa de la vida.</div>
+<div class="mensaje">🌷 Sueño con crecer contigo, sin prisas.</div>
+
+<div class="mensaje">👨‍👩‍👧‍👦 Sueño con una familia llena de amor y risas.</div>
+<div class="mensaje">🏠 Sueño con un hogar donde el cariño se sienta.</div>
+<div class="mensaje">💞 Sueño con educar con amor y paciencia.</div>
+<div class="mensaje">🌸 Sueño con momentos sencillos en familia.</div>
+<div class="mensaje">🤍 Sueño con enseñarle a nuestros hijos lo que es amar.</div>
+<div class="mensaje">🫂 Sueño con abrazos en familia después de un día largo.</div>
+<div class="mensaje">✨ Sueño con crecer juntos como familia.</div>
+<div class="mensaje">🌿 Sueño con valores, respeto y ternura.</div>
+<div class="mensaje">💖 Sueño con verte sonreír rodeada de amor.</div>
+<div class="mensaje">🏡 Sueño con un hogar donde siempre se vuelva.</div>
+
+<div class="mensaje">🌈 Sueño con un futuro donde el amor nos guíe.</div>
+<div class="mensaje">🕊️ Sueño con paz, estabilidad y cariño.</div>
+<div class="mensaje">💫 Sueño con compartir logros y aprendizajes.</div>
+<div class="mensaje">🌙 Sueño con cuidar de los nuestros juntos.</div>
+<div class="mensaje">💞 Sueño con un amor y solo seas tu.</div>
+<div class="mensaje">🌸 Sueño con construir recuerdos en familia.</div>
+<div class="mensaje">✨ Sueño con un futuro lleno de amor verdadero.</div>
+<div class="mensaje">🫶 Sueño con estar unidos pase lo que pase.</div>
+<div class="mensaje">🏡 Sueño con una vida sencilla y feliz contigo.</div>
+<div class="mensaje">💖 Sueño con todo… si es contigo.</div>
+
+<button onclick="mostrar()">🌠 Ver sueño</button>
+</div>
+
+<script>
+const mensajes=document.getElementsByClassName("mensaje");
+let actual=0;
+function mostrar(){
+ for(let i=0;i<mensajes.length;i++) mensajes[i].style.display="none";
+ if(actual>=mensajes.length) actual=0;
+ mensajes[actual].style.display="block";
+ actual++;
+}
+</script>
+
+</body>
+</html>

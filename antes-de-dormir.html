@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Antes de Dormir 🌙</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  font-family:Georgia, serif;
+}
+
+.caja{
+  background:white;
+  padding:38px;
+  border-radius:30px;
+  max-width:560px;
+  width:92%;
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+h2{
+  color:#1a237e;
+}
+
+.mensaje{
+  font-size:16px;
+  line-height:1.7;
+  margin-top:22px;
+  color:#333;
+  min-height:220px;
+  white-space:pre-line;
+}
+
+button{
+  margin-top:28px;
+  padding:15px 34px;
+  border:none;
+  border-radius:35px;
+  background:#3949ab;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:.4s;
+}
+
+button:hover{
+  background:#1e88e5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="caja">
+  <h2>🌙 Antes de dormir</h2>
+
+  <div class="mensaje" id="mensaje"></div>
+
+  <button onclick="mostrarMensaje()">🌌 Abrir mensaje</button>
+</div>
+
+<script>
+const mensajes = [
+`🌙 Noche 1
+
+Antes de cerrar los ojos, quiero que recuerdes esto: eres profundamente amada 💖  
+No importa cómo haya sido tu día, aquí hay alguien que piensa en ti con ternura y calma.  
+Descansa tranquila, suelta tus preocupaciones y compartelas conmigo y deja que la noche cuide tus sueñitos lindos 🌌✨`,
+
+`🌙 Noche 2
+
+Si hoy sentiste cansancio o dudas, deja que esta noche te cure un poquito 🤍  
+Mañana será una nueva oportunidad, pero ahora solo importa tu descanso.  
+Yo te cuido en silencio, incluso cuando duermes 😴te amo 🫶💫`,
+
+`🌙 Noche 3
+
+Quiero que duermas sabiendo que estoy orgulloso de ti 🫶  
+De tu fuerza, de tu corazón y de la forma tan hermosa en la que amas.  
+Que esta noche el mundo esta orgulloso de ti pero yo lo estoy mucho mas🫶 y tu corazón se sienta muy feliz 🌙✨`,
+
+`🌙 Noche 4
+
+Mientras duermes, imagina que te envuelvo en un abrazo largo y sincero 🤗  
+Uno de esos que no juzgan, que solo protegen y dan calma.  
+Buenas noches, mi amor, sueña bonito 🌌💖`,
+
+`🌙 Noche 5
+
+Si hoy el mundo no vio lo linda que eres siempre, 💖tranquila amor siempre veo mucho mas que linduro en ti 🌙  
+Respira profundo, mi corazoncito solo es tuyo 🫶 descansa.  
+Recuerda que siempre tienes un lugar seguro en mí 🏡💞`,
+
+`🌙 Noche 6
+
+Esta noche quiero que sepas que no tienes que ser perfecta 🌷  
+Te amo tal como eres, incluso en tus días cansados y silenciosos.  
+Descansa, mi vida, mañana volverá la luz y mucho mas hermosa que ayer ✨te amo💖`,
+
+`🌙 Noche 7
+
+Que la noche te regale lo mas hermoso y sueños lindos 🌠  
+Gracias por existir, por tu sonrisa y por tu corazón tan bonito.  
+Aquí hay alguien que te ama más de lo que imaginas 💕no te imaginas lo mucho que te amo🌙 dulces sueños💖`,
+
+`🌙 Noche 8
+
+Si hoy dudaste de ti, deja que yo crea por los dos 🤍  
+Ahora solo descansa, mañana será otro capítulo y mucho mas hermoso.  
+Buenas noches, mi amor, que dios me la cuide y acompañe siempre🌌dulces sueñitos amorcito💖😴`,
+
+`🌙 Noche 9
+
+Que la luna cuide tus sueños y las estrellas iluminen tu ternura ✨  
+No estás sola, nunca lo vas a estar.  
+Dulces sueñitos, aquí estoy, y siempre lo estare💖🌙`,
+
+`🌙 Noche 10
+
+Antes de dormir, guarda esta verdad en tu corazón: eres muy importante 🫶  
+Eres la mejor del mundo, te valoro y profundamente respeto.  
+Buenas noches, mi amorcito, que descanse muy bonito. 🌌te amo💖`
+];
+
+let indice = 0;
+
+function mostrarMensaje(){
+  const contenedor = document.getElementById("mensaje");
+  contenedor.innerText = mensajes[indice];
+  indice++;
+  if(indice >= mensajes.length){
+    indice = 0;
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti ❤️</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#ffe0ec,#e3f2fd);
+  font-family:Georgia,serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.pantalla{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.oculta{display:none;}
+
+/* CAJA INICIAL */
+.caja{
+  background:white;
+  padding:40px;
+  border-radius:30px;
+  max-width:520px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+  animation:aparecer 1.2s ease;
+}
+
+@keyframes aparecer{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+h1{color:#c2185b;}
+p{font-size:18px;color:#444;}
+
+button{
+  margin-top:25px;
+  padding:14px 34px;
+  border:none;
+  border-radius:30px;
+  background:#ff5c8a;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  animation:latido 1.2s infinite alternate;
+}
+
+.boton-volver{
+  background:#c2185b;
+  font-size:14px;
+  margin-top:18px;
+}
+
+@keyframes latido{
+  from{transform:scale(1)}
+  to{transform:scale(1.1)}
+}
+
+/* PANTALLA AMOR */
+.pantalla-amor{
+  background:linear-gradient(135deg,#ffe0ec,#e3f2fd);
+  flex-direction:column;
+}
+
+/* CORAZÓN */
+.corazon{
+  font-size:160px;
+  animation:corazonLatido 1.2s infinite;
+}
+
+@keyframes corazonLatido{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.15)}
+  100%{transform:scale(1)}
+}
+
+/* RECUADRO */
+.recuadro{
+  background:white;
+  padding:20px 28px;
+  border-radius:25px;
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+  text-align:center;
+  max-width:85%;
+  margin-top:15px;
+  animation:aparecer 1.2s ease;
+}
+
+/* TEXTO */
+.mensaje{
+  font-size:24px;
+  color:#c2185b;
+  margin:8px 0;
+}
+
+/* BESITOS */
+.beso{
+  position:absolute;
+  font-size:28px;
+  animation:besito 3s linear forwards;
+}
+
+@keyframes besito{
+  from{transform:translateY(0) scale(1);opacity:1}
+  to{transform:translateY(-260px) scale(1.4);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PANTALLA 1 -->
+<div class="pantalla" id="pantalla1">
+  <div class="caja">
+    <h1>💖 Bienvenida, mi amor 💖</h1>
+    <p>Esta app fue hecha con todo mi corazón ❤️</p>
+    <button onclick="entrar()">✨ TE AMO 💖 ✨</button>
+  </div>
+</div>
+
+<!-- PANTALLA 2 -->
+<div class="pantalla pantalla-amor oculta" id="pantalla2">
+  <div class="corazon">❤️</div>
+
+  <div class="recuadro">
+    <div class="mensaje">Mi corazón late por ti 💕</div>
+    <div class="mensaje">💖 Gracias por estar aquí, mi amor 💖</div>
+    <button class="boton-volver" onclick="volver()">⬅️ Volver</button>
+  </div>
+</div>
+
+<script>
+let intervaloBesos;
+
+function entrar(){
+  document.getElementById("pantalla1").classList.add("oculta");
+  document.getElementById("pantalla2").classList.remove("oculta");
+  intervaloBesos = setInterval(lanzarBesos, 350);
+}
+
+function volver(){
+  document.getElementById("pantalla2").classList.add("oculta");
+  document.getElementById("pantalla1").classList.remove("oculta");
+  clearInterval(intervaloBesos);
+}
+
+function lanzarBesos(){
+  const beso = document.createElement("div");
+  beso.className="beso";
+  beso.innerHTML = Math.random()>0.5 ? "💋" : "💖";
+  beso.style.left = Math.random()*100 + "vw";
+  beso.style.bottom = "160px";
+  document.body.appendChild(beso);
+
+  setTimeout(()=>beso.remove(),3000);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Estoy contigo 💔</title>
+<style>
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#fff1f6,#e6f0ff);
+font-family:Georgia,serif;display:flex;align-items:center;justify-content:center}
+.caja{background:white;padding:35px;border-radius:30px;max-width:560px;width:90%;
+text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.mensaje{display:none;font-size:18px;line-height:1.6;margin-top:25px}
+button{margin-top:30px;padding:14px 36px;border:none;background:#ff5c8a;
+color:white;border-radius:35px;font-size:16px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="caja">
+<h2>💔 Estoy contigo</h2>
+<p>Lee despacio 💖</p>
+
+<div class="mensaje">🤍 Aquí estoy para ti.</div>
+<div class="mensaje">🤍 Respira despacio… estoy contigo, incluso en los días grises.</div>
+<div class="mensaje">🫂 No tienes que ser fuerte todo el tiempo, yo te sostengo.</div>
+<div class="mensaje">💧 No llores sola, estare contigo para llorar y secar tus lagrimas.</div>
+<div class="mensaje">💖 Aunque hoy duela, recuerda que puedes compartir tu dolor conmigo.</div>
+<div class="mensaje">🌷 Estoy orgulloso de ti, incluso cuando dudas de ti misma.</div>
+<div class="mensaje">🌈 Todo va a pasar, y yo seguiré aquí.</div>
+<div class="mensaje">✨ Eres más valiosa de lo que este momento te deja ver.</div>
+<div class="mensaje">🤍 Si el mundo pesa, apóyate en mí.</div>
+<div class="mensaje">🕊️ No estás sola, nunca lo vas a estar.</div>
+<div class="mensaje">🫶 Te abrazo con el corazón, tan fuerte como puedo.</div>
+
+<div class="mensaje">🌧️ Está bien no estar bien, yo te acompaño en el proceso.</div>
+<div class="mensaje">🌸 Incluso rota, sigues siendo increíble y te amo.</div>
+<div class="mensaje">🛌 Descansa tu corazón, yo cuido de ti.</div>
+<div class="mensaje">🤍 No tienes que explicarlo todo, te entiendo igual.</div>
+<div class="mensaje">💞 Tu tristeza no me aleja, me acerca más.</div>
+<div class="mensaje">💫 Aunque no lo sientas ahora, eres mucho mas que luz.</div>
+<div class="mensaje">🫂 Si hoy no puedes con todo, está bien… yo puedo contigo.</div>
+<div class="mensaje">🤎 Te quiero incluso en tus días más silenciosos.</div>
+<div class="mensaje">🌼 Tu corazón merece ternura, no exigencias.</div>
+
+<div class="mensaje">🧸 No tienes que cargar esto sola yo puedo cargar contigo.</div>
+<div class="mensaje">🌙 Aun en la tormenta, sigo eligiéndote.</div>
+<div class="mensaje">🤍 Eres suficiente, incluso hoy.</div>
+<div class="mensaje">🫶 Si te cansas, recuéstate en mí.</div>
+<div class="mensaje">💖 Estoy aquí, sin condiciones.</div>
+<div class="mensaje">🌿 Tu dolor importa.</div>
+<div class="mensaje">🤍 Nada de lo que sientes es exagerado.</div>
+<div class="mensaje">💌 Te amo también cuando estás triste.</div>
+<div class="mensaje">🌤️ Este momento no define quién eres.</div>
+<div class="mensaje">🌈 Mañana será más suave, te lo prometo.</div>
+
+<button onclick="mostrar()">💌 Abrázame</button>
+</div>
+
+<script>
+const mensajes=document.getElementsByClassName("mensaje");
+let actual=0;
+function mostrar(){
+ for(let i=0;i<mensajes.length;i++) mensajes[i].style.display="none";
+ if(actual>=mensajes.length) actual=0;
+ mensajes[actual].style.display="block";
+ actual++;
+}
+</script>
+
+</body>
+</html>

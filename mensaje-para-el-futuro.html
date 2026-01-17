@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mensaje para el Futuro 💍</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,#fdeff9,#f8bbd0,#e1bee7);
+  font-family:Georgia,serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+/* CORAZONES FLOTANDO */
+.corazon{
+  position:fixed;
+  bottom:-20px;
+  font-size:24px;
+  animation:flotar 8s linear infinite;
+  opacity:0.8;
+}
+@keyframes flotar{
+  0%{transform:translateY(0) scale(1);opacity:1}
+  100%{transform:translateY(-120vh) scale(1.5);opacity:0}
+}
+
+.caja{
+  position:relative;
+  background:white;
+  padding:45px;
+  border-radius:35px;
+  max-width:580px;
+  width:90%;
+  max-height:85vh;        /* 🔹 PERMITE BAJAR */
+  overflow-y:auto;        /* 🔹 SCROLL INTERNO */
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  z-index:2;
+}
+
+/* CORAZÓN GIGANTE */
+.corazon-grande{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:280px;
+  color:#f8bbd0;
+  opacity:0.25;
+  z-index:-1;
+}
+
+/* BLOQUEO */
+.bloqueo input{
+  padding:12px;
+  border-radius:20px;
+  border:1px solid #ccc;
+  width:80%;
+  text-align:center;
+  font-size:16px;
+}
+
+button{
+  margin-top:20px;
+  padding:14px 36px;
+  border:none;
+  border-radius:35px;
+  background:#ec407a;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+button:hover{
+  background:#d81b60;
+}
+
+/* MENSAJE */
+.mensaje{
+  display:none;
+  font-size:20px;
+  line-height:1.9;
+  margin-top:25px;
+  color:#6a1b9a;
+  white-space:pre-line;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CORAZONES -->
+<script>
+for(let i=0;i<25;i++){
+  let c=document.createElement("div");
+  c.className="corazon";
+  c.innerHTML="💖";
+  c.style.left=Math.random()*100+"vw";
+  c.style.animationDuration=(6+Math.random()*6)+"s";
+  c.style.fontSize=(18+Math.random()*20)+"px";
+  document.body.appendChild(c);
+}
+</script>
+
+<div class="caja">
+
+  <!-- BLOQUEO -->
+  <div class="bloqueo" id="bloqueo">
+    <h2>🔐 Mensaje para el futuro</h2>
+    <p>
+      💍 Solo mi esposa puede leer esto 💖  
+      <br><br>
+      🗝️ <b>Pista:</b> Próximamente te diré la clave…🔐
+aunque en realidad ya la sabes 💕
+corazoncito mio 💖te amo 💖
+    </p>
+    <input type="password" id="clave" placeholder="Escribe la contraseña 💕">
+    <br>
+    <button onclick="desbloquear()">✨ Desbloquear</button>
+  </div>
+
+  <!-- MENSAJE -->
+  <div class="mensaje" id="mensaje">
+    <div class="corazon-grande">💖</div>
+
+💍💖 Si llegaste hasta aquí, mi amor…  
+
+entonces lo logramos 🤍  
+superamos cada obstáculo,  
+cada miedo y cada prueba 🌈  
+
+Hoy puedo llamarte mi esposa 💍  
+mi compañera de vida 🫶  
+mi lugar seguro 🏡  
+
+Gracias por no soltar mi mano  
+cuando el camino se puso difícil 🌧️  
+por amar con paciencia  
+y elegirnos cada día ✨  
+
+Si algún día dudas,  
+recuerda esto:  
+siempre voy a elegirte ♾️  
+
+Te amo como esposo,  
+pero aún más como quien  
+te cuida, te respeta  
+y te ama para siempre ❤️  
+
+Mi esposa…  
+mi amor eterno 💖  
+mi para siempre 🌸✨
+  </div>
+
+</div>
+
+<script>
+const CONTRASENA = "teamo"; // 🔑 CAMBIA AQUÍ
+
+function desbloquear(){
+  const valor=document.getElementById("clave").value;
+  if(valor===CONTRASENA){
+    document.getElementById("bloqueo").style.display="none";
+    document.getElementById("mensaje").style.display="block";
+  }else{
+    alert("💔 Esa no es la clave, amor");
+  }
+}
+</script>
+
+</body>
+</html>

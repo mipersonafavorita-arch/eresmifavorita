@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Promesas de Amor 💍</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ffe0ec,#fce4ec);
+  font-family:Georgia, serif;
+}
+
+.caja{
+  background:white;
+  padding:35px;
+  border-radius:30px;
+  max-width:520px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+h2{
+  color:#c2185b;
+}
+
+.promesa{
+  margin-top:25px;
+  font-size:18px;
+  color:#444;
+  min-height:70px;
+}
+
+button{
+  margin-top:25px;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#f48fb1;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ec407a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="caja">
+  <h2>💍 Mis promesas para ti</h2>
+
+  <div class="promesa" id="promesa">
+    <!-- aquí aparece una por una -->
+  </div>
+
+  <button onclick="mostrarPromesa()">🤍 Ver promesa</button>
+</div>
+
+<script>
+const promesas = [
+  "💖 Prometo escucharte incluso cuando no sepas cómo explicar lo que sientes.",
+  "🫶 Prometo cuidarte en tus días fuertes y en tus días frágiles.",
+  "🌙 Prometo quedarme cuando estés cansada del mundo.",
+  "🌱 Prometo apoyarte en tus sueños, incluso cuando duden de ellos.",
+  "🤍 Prometo respetar tu espacio sin alejarme de tu corazón.",
+  "🫂 Prometo ser refugio cuando todo pese.",
+  "✨ Prometo elegirte incluso en los días difíciles.",
+  "🌧️ Prometo acompañarte cuando no tengas ganas de hablar.",
+  "💫 Prometo hacerte sentir segura, no controlada.",
+  "🌿 Prometo crecer contigo y aprender de ti.",
+  "🕊️ Prometo cuidar tus silencios.",
+  "💖 Prometo no rendirme con nosotros.",
+  "🌙 Prometo pensarte antes de dormir.",
+  "🫶 Prometo amarte sin prisas.",
+  "🌸 Prometo hacerte reír cuando quieras llorar.",
+  "🤍 Prometo respetar tu esencia.",
+  "🌱 Prometo caminar contigo, no delante ni detrás.",
+  "💫 Prometo construir paz contigo.",
+  "🕯️ Prometo ser luz en tus noches oscuras.",
+  "🫂 Prometo abrazarte sin motivo.",
+  "🌿 Prometo elegirte cada día.",
+  "💖 Prometo cuidarte como lo más valioso.",
+  "🌙 Prometo soñarte despierto.",
+  "✨ Prometo proteger tu corazón.",
+  "🫶 Prometo estar cuando me necesites.",
+  "🌧️ Prometo secar tus lágrimas.",
+  "🤍 Prometo ser hogar.",
+  "🌱 Prometo crecer a tu lado.",
+  "💫 Prometo amarte con hechos.",
+  "🕊️ Prometo no soltarte."
+];
+
+let indice = 0;
+
+function mostrarPromesa(){
+  const contenedor = document.getElementById("promesa");
+  contenedor.innerText = promesas[indice];
+  indice++;
+
+  if(indice >= promesas.length){
+    indice = 0; // vuelve a empezar
+  }
+}
+</script>
+
+</body>
+</html>
